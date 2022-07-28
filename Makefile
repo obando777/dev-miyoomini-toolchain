@@ -8,6 +8,9 @@ SDCARD_PATH := $(shell pwd)/SDCARD
 .build: Dockerfile
 	mkdir -p ./workspace
 	mkdir -p ./SDCARD
+	chmod a+x ./support/setup-toolchain.sh
+	chmod a+x ./support/setup-env.sh
+	chmod a+x ./support/setup-sqlite.sh
 	docker build -t $(TOOLCHAIN_NAME) .
 	touch .build
 
