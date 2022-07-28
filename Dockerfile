@@ -21,6 +21,7 @@ RUN apt-get -y update && apt-get -y install \
 	unzip \
 	wget \
 	zip \
+	sqlite3 \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /root/workspace
@@ -29,6 +30,7 @@ WORKDIR /root
 COPY support .
 RUN ./setup-toolchain.sh
 RUN cat setup-env.sh >> .bashrc
+RUN ./setup-sqlite.sh
 
 VOLUME /root/workspace
 WORKDIR /root/workspace
