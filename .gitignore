@@ -1,5 +1,7 @@
 .DS_Store
-.build
-workspace/*
-SDCARD/*
-miyoomini-toolchain.tar.xz
+/.build
+/workspace/*
+/SDCARD
+/customer
+/miyoomini-toolchain.tar.xz
+/appconfigs
