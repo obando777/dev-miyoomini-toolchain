@@ -15,14 +15,14 @@ RUN apt-get -y update && apt-get -y install \
 	git \
 	libncurses5-dev \
 	make \
+	p7zip-full \
 	rsync \
 	scons \
+	sqlite3 \
 	tree \
 	unzip \
 	wget \
-	zip \
-	sqlite3 \
-  && rm -rf /var/lib/apt/lists/*
+	zip
 
 RUN mkdir -p /root/workspace
 WORKDIR /root
