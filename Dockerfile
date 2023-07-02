@@ -22,7 +22,8 @@ RUN apt-get -y update && apt-get -y install \
 	tree \
 	unzip \
 	wget \
-	zip
+	zip \
+  && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /root/workspace
 WORKDIR /root
