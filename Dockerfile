@@ -39,9 +39,9 @@ RUN rm -rf /var/lib/apt/lists/*
 # Locale
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
 	locale-gen
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8     
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 # Workspace
 RUN mkdir -p /root/workspace
@@ -52,6 +52,7 @@ COPY support .
 RUN ./setup-toolchain.sh
 RUN cat setup-env.sh >> .bashrc
 RUN ./setup-sqlite.sh
+RUN ./setup-gtest.sh
 
 VOLUME /root/workspace
 WORKDIR /root/workspace
