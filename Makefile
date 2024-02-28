@@ -1,7 +1,7 @@
 .PHONY: shell
 .PHONY: clean
 	
-TOOLCHAIN_NAME=ghcr.io/onionui/miyoomini-toolchain
+TOOLCHAIN_NAME=aemiii91/miyoomini-toolchain:latest
 WORKSPACE_DIR := $(shell pwd)/workspace
 SDCARD_PATH := $(shell pwd)/SDCARD
 
