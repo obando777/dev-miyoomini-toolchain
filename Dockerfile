@@ -32,6 +32,12 @@ RUN apt-get -y install \
 	libsdl-ttf2.0-dev \
 	libsdl-gfx1.2-dev \
 	libgtest-dev \
+	libsdl2-dev \
+	libsdl2-gfx-dev \
+	libsdl2-image-dev \
+	libsdl2-mixer-dev \
+	libsdl2-net-dev \
+	libsdl2-ttf-dev \
 	cppcheck
 
 RUN rm -rf /var/lib/apt/lists/*
